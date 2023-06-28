@@ -13,10 +13,12 @@
 
 
 /* Reset */
-.list,
+
 ul,
 ol {
   list-style: none;
+  margin: 0;
+    padding: 0;
 }
 
 
@@ -62,7 +64,7 @@ body {
 }
 
 .container {
-  max-width: 1128px;
+  max-width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -114,7 +116,7 @@ body {
   justify-content: space-between;
 }
 
-.header-address.list {
+.header-address-list {
   display: flex;
   align-items: center;
   gap: 40px;
@@ -155,6 +157,8 @@ letter-spacing: 0.02em;
 
 .hero {
   background-color: var(--headings-cl);
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .hero-title {
@@ -163,6 +167,9 @@ letter-spacing: 0.02em;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--white-cl);
+  margin: 0 auto;
+  width: 496px;
+  padding-bottom: 48px;
 }
 
 .hero-btn {
@@ -172,6 +179,9 @@ letter-spacing: 0.02em;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--white-cl);
+  display: block;
+  padding: 16px 32px;
+  margin: 0 auto;
 }
 
 .hero-btn:hover, .hero-btn:focus {
@@ -184,9 +194,20 @@ letter-spacing: 0.02em;
   |============================
 */
 
-.features {}
+.features {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
 
-.features-item {}
+.features-list {
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
+}
+
+.features-item {
+  width: calc((100% - 3 * 24px) / 4);
+}
 
 
 .section-features-subtitle, .portfolio-subtitle, .team-name {
@@ -197,6 +218,10 @@ letter-spacing: 0.02em;
   letter-spacing: 0.02em;
 }
 
+.section-features-subtitle {
+  padding-bottom: 8px;
+}
+
 .features-text {}
 
 /**
@@ -205,9 +230,19 @@ letter-spacing: 0.02em;
   |============================
 */
 
-.section-product {}
+.section-product {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.section-product-list {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
 
 .section-product-list-item {}
+
 
 .section-product-title, .section-team-title {
   line-height: 1.11;
@@ -216,6 +251,7 @@ letter-spacing: 0.02em;
   text-transform: capitalize;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-bottom: 72px;
 }
 
 /**
@@ -227,15 +263,30 @@ letter-spacing: 0.02em;
 .team {
   background-color: var(--light-bg);
   letter-spacing: 0.02em;
+  padding: 120px 0;
 }
 
 .section-team-title {}
 
+.team-list {
+display: flex;
+align-items: center;
+gap: 24px;
+}
+
 .team-name {
+  margin-bottom: 8px;
 }
 
 .team-list-item {
   background-color: var(--white-cl);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-card-content {
+  padding: 32px 0;
+  text-align: center;
+  
 }
 
 .team-name-job {
@@ -248,7 +299,10 @@ letter-spacing: 0.02em;
   |============================
 */
 
-.portfolio {}
+.portfolio {
+  padding-bottom: 120px;
+    padding-top: 96px;
+}
 
 .section {}
 
@@ -259,6 +313,9 @@ letter-spacing: 0.02em;
     color: var(--CTA-iris);
     background-color: var(--light-bg);
       text-transform: capitalize;
+        padding: 12px 24px;
+        border: 1px solid var(--acent-cl);
+        border-radius: 4px;
 }
 
 .portfolio-btn:hover, .portfolio-btn:focus {
@@ -266,19 +323,41 @@ background-color: var(--CTA-ocean);
 color: var(--white-cl);
 }
 
-.portfolio-subtitle {}
+.portfolio-subtitle {
+  margin-bottom: 8px;
+}
 
-.portfolio-filters {}
+.portfolio-filters-list {
+display: flex;
+align-items: center;
+  gap: 24px;
+    margin-bottom: 72px;
+    justify-content: center;
+}
 
 .portfolio-filters-item {}
 
-.portfolio-examples {}
+.portfolio-examples-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 48px;
+  column-gap: 24px;
+}
 
-.portfolio-examples-list-item {}
+.portfolio-examples-list-item {
+  width: calc((100% - 2*24) / 3);
+}
 
 .portfolio-examples-text {}
 
-
+.card-content {
+  padding-left: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border: 1px solid var(--acent-cl);
+  border-top: none;
+}
 
 /**
   |============================
@@ -289,10 +368,17 @@ color: var(--white-cl);
 .footer {
   background-color: var(--headings-cl);
   color: var(--light-bg);
+  padding: 100px 0;
 }
 
 .footer-text {
   letter-spacing: 0.02em;
+  max-width: 264px;
+}
+
+footer .header-logo {
+  display: block;
+  margin-bottom: 16px;
 }
 
 .footer-logo-light {
